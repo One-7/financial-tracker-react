@@ -3,7 +3,7 @@ import FinancialRecordModel from "../schema/financial-record";
 
 const router = express.Router();
 
-router.get("/getAllByUserID/:userId", async (req: Request, res: Response) => {
+router.get("/getAllByUserID/:userId", async (req: Request, res: Response) => {//this no longer works, please write or edit in a workaround.
   try {
     const userId = req.params.userId;
     const records = await FinancialRecordModel.find({ userId: userId });
